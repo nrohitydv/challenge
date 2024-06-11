@@ -5,7 +5,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -13,7 +12,7 @@ import Image from "next/image";
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className="lg:ml-[50px] sm:block hidden">
       <div className="flex justify-between">
         <ul className="flex gap-3 mt-4 ml-4">
           <li className="mt-1">
@@ -24,7 +23,7 @@ const NavBar = () => {
 
           <li>
             <Select>
-              <SelectTrigger className="w-[110px] border-none ml-5 ">
+              <SelectTrigger className="min-w-[110px] border-none ml-5 text-sm font-medium text-gray-700 ">
                 <SelectValue placeholder="Features" />
               </SelectTrigger>
               <SelectContent>
@@ -85,9 +84,9 @@ const NavBar = () => {
             </Select>
           </li>
 
-          <li>
+          <li className="ml-2">
             <Select>
-              <SelectTrigger className="w-[110px] border-none">
+              <SelectTrigger className="min-w-[110px]  border-none">
                 <SelectValue placeholder="Company" />
               </SelectTrigger>
               <SelectContent>
@@ -101,21 +100,21 @@ const NavBar = () => {
           </li>
 
           <li className="mt-2 font-light ml-2">
-            <Link href="/">
-              <p>Careers</p>
+            <Link href="/careers">
+              <p className="text-sm font-medium text-gray-700">Careers</p>
             </Link>
           </li>
         </ul>
 
         <ul className="flex gap-5 mr-4 px-2">
-          <li className="mt-4 font-light ring-2 p-2 rounded-md ring-white hover:ring-black">
+          <li className="mt-4 font-light ring-2 p-2 rounded-md ring-white hover:ring-black cursor-pointer">
             <Link href="/">
-              <p>Login</p>
+              <p className="text-sm font-medium text-gray-700">Login</p>
             </Link>
           </li>
-          <li className="mt-4 font-light ring-2 p-2 rounded-md ring-white hover:ring-black">
+          <li className="mt-4 font-light ring-2 p-2 rounded-md ring-white hover:ring-black cursor-pointer">
             <Link href="/">
-              <p>Register</p>
+              <p className="text-sm font-medium text-gray-700">Register</p>
             </Link>
           </li>
         </ul>
