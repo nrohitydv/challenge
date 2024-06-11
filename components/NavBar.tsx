@@ -13,23 +13,23 @@ import Image from "next/image";
 const NavBar = () => {
   return (
     <nav className="lg:ml-[50px] sm:block hidden">
-      <div className="flex justify-between">
-        <ul className="flex gap-3 mt-4 ml-4">
-          <li className="mt-1">
+      <div className="flex justify-between mr-5">
+        <ul className="flex items-center gap-5 p-5">
+          <li className="flex-shrink-0">
             <Link href="/">
-              <h1 className="text-xl font-extrabold">snap</h1>
+              <h1 className="text-3xl font-extrabold">snap</h1>
             </Link>
           </li>
 
-          <li>
+          <li className="flex-shrink-0 min-w-[110px]">
             <Select>
-              <SelectTrigger className="min-w-[110px] border-none ml-5 text-sm font-medium text-gray-700 ">
+              <SelectTrigger className="w-full border-none text-sm font-medium text-gray-700">
                 <SelectValue placeholder="Features" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
                   <SelectItem value="todo">
-                    <div className="flex gap-3 p-1">
+                    <div className="flex gap-2">
                       <Image
                         src="/icon-todo.svg"
                         alt="todo"
@@ -39,12 +39,11 @@ const NavBar = () => {
                       <p className="text-sm font-medium text-gray-700">Todo</p>
                     </div>
                   </SelectItem>
-
                   <SelectItem value="calendar">
-                    <div className="flex gap-3 p-1">
+                    <div className="flex gap-2">
                       <Image
                         src="/icon-calendar.svg"
-                        alt="todo"
+                        alt="calendar"
                         height={15}
                         width={15}
                       />
@@ -54,10 +53,10 @@ const NavBar = () => {
                     </div>
                   </SelectItem>
                   <SelectItem value="reminders">
-                    <div className="flex gap-3 p-1">
+                    <div className="flex gap-2">
                       <Image
                         src="/icon-reminders.svg"
-                        alt="todo"
+                        alt="reminders"
                         height={15}
                         width={15}
                       />
@@ -67,10 +66,10 @@ const NavBar = () => {
                     </div>
                   </SelectItem>
                   <SelectItem value="planning">
-                    <div className="flex gap-3 p-1">
+                    <div className="flex gap-2">
                       <Image
                         src="/icon-planning.svg"
-                        alt="todo"
+                        alt="planning"
                         height={15}
                         width={15}
                       />
@@ -84,12 +83,12 @@ const NavBar = () => {
             </Select>
           </li>
 
-          <li className="ml-2">
+          <li className="flex-shrink-0 min-w-[110px]">
             <Select>
-              <SelectTrigger className="min-w-[110px]  border-none">
+              <SelectTrigger className="w-full border-none text-sm font-medium text-gray-700">
                 <SelectValue placeholder="Company" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="items-center">
                 <SelectGroup>
                   <SelectItem value="history">History</SelectItem>
                   <SelectItem value="team">Our Team</SelectItem>
@@ -99,22 +98,22 @@ const NavBar = () => {
             </Select>
           </li>
 
-          <li className="mt-2 font-light ml-2">
+          <li className="flex-shrink-0 min-w-[110px]">
             <Link href="/careers">
               <p className="text-sm font-medium text-gray-700">Careers</p>
             </Link>
           </li>
         </ul>
 
-        <ul className="flex gap-5 mr-4 px-2">
-          <li className="mt-4 font-light ring-2 p-2 rounded-md ring-white hover:ring-black cursor-pointer">
+        <ul className="flex items-center gap-5 p-5">
+          <li className="w-24 font-light ring-1 p-2 rounded-md ring-white hover:ring-black cursor-pointer">
             <Link href="/">
-              <p className="text-sm font-medium text-gray-700">Login</p>
+              <p className="text-sm font-medium ml-5 text-gray-700">Login</p>
             </Link>
           </li>
-          <li className="mt-4 font-light ring-2 p-2 rounded-md ring-white hover:ring-black cursor-pointer">
+          <li className="w-24 font-light ring-1 p-2 rounded-md ring-white hover:ring-black cursor-pointer">
             <Link href="/">
-              <p className="text-sm font-medium text-gray-700">Register</p>
+              <p className="text-sm font-medium ml-4 text-gray-700">Register</p>
             </Link>
           </li>
         </ul>

@@ -4,8 +4,8 @@ import React from "react";
 
 const Home = () => {
   return (
-    <main className="flex flex-col md:flex-row items-center justify-between p-6 md:p-5 md:gap-5 md:mt-5 ">
-      <div className="flex flex-col mb-10 md:mb-0  lg:ml-[140px] md:mr-[25px]">
+    <main className="flex flex-col md:flex-row items-center justify-between p-6 md:p-5 gap-5 md:mt-5">
+      <div className="flex flex-col mb-10 md:mb-0 md:ml-5 lg:ml-[140px] md:mr-[25px]">
         <Image
           src="/image-hero-mobile.png"
           alt="Mobile view"
@@ -26,7 +26,7 @@ const Home = () => {
         <Button className="mt-5 hover:bg-white hover:text-black hover:border w-[200px] rounded-md">
           Learn More
         </Button>
-        <div className="flex gap-5 mt-[100px] justify-center md:justify-start">
+        <div className="flex gap-5 mt-10 md:mt-[50px] lg:mt-[100px] justify-center md:justify-start">
           <Image
             src="/client-databiz.svg"
             alt="Databiz logo"
@@ -57,12 +57,13 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="flex-shrink-0 mt-3 lg:mr-[90px] md:mr-[25px]">
+      <div className="flex-shrink-0 mt-3 md:mt-0 lg:mr-[90px] md:mr-[25px]">
         <Image
           src="/image-hero-desktop.png"
           alt="Desktop image"
-          height={300}
+          height={500}
           width={500}
+          objectFit="cover"
           className="rounded-lg shadow-lg sm:block hidden"
         />
       </div>
